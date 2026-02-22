@@ -1,39 +1,30 @@
 package xyz.herweg.telemetryMetrics.data.entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-public class Service {
-
+public class TelemetryService {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column
     private UUID systemId;
-
-    @Column
     private UUID categoryId;
 
-    @Column
     private String name;
-
-    @Column
     private Instant createdAt;
 
-
-    public Service() {
+    protected TelemetryService() {
     }
 
-    public Service(UUID id, UUID systemId, UUID categoryId, String name, Instant createdAt) {
-        this.id = id;
+    public TelemetryService(UUID systemId, UUID categoryId, String name, Instant createdAt) {
         this.systemId = systemId;
         this.categoryId = categoryId;
         this.name = name;
