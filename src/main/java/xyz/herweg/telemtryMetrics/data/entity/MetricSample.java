@@ -15,10 +15,10 @@ import java.util.UUID;
 public class MetricSample {
 
     @Id
-    @Column(name = "id", nullable = false, updatable = false, columnDefinition = "BINARY(16)")
+    @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
 
-    @Column(name = "service_id", nullable = false, columnDefinition = "BINARY(16)")
+    @Column(name = "service_id", nullable = false)
     private UUID serviceId;
 
     @Column(name = "timestamp", nullable = false)
