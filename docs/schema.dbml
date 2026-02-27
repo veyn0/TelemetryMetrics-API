@@ -92,8 +92,6 @@
 
   Ref: "telemetry_service"."id" < "telemetry_status_page_datasources"."service_id"
 
-
-
 Ref: "telemetry_status_page_datasources"."id" < "telemetry_status_page_datasource_composition"."datasource_id"
 
-Ref: "telemetry_service"."id" < "telemetry_status_page_datasource_composition"."datasource_id"
+Ref: "telemetry_service"."id" < "telemetry_status_page_datasource_composition"."service_id"
