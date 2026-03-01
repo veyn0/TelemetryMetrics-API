@@ -85,6 +85,8 @@ public class AdminLayoutsController {
         if (req.duration() != null) l.setDuration(req.duration());
         if (req.graphStyle() != null) l.setGraphStyle(req.graphStyle());
 
+        repo.save(l);
+
         return new LayoutDtos.LayoutResponse(
                 l.getId(), l.getWidgetId(), l.getStatusPageId(),
                 l.getPosX(), l.getPosY(),
